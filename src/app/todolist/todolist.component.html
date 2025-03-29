@@ -1,0 +1,17 @@
+<div>
+    <h2>Todo List</h2>
+  
+    <!-- Input field with Add button -->
+    <div style="display: flex; gap: 10px;">
+      <input [formControl]="todoInput" (keydown.enter)="addTodo()" placeholder="Enter a new task" />
+      <button (click)="addTodo()">Add</button>
+    </div>
+  
+    <ul>
+      <li *ngFor="let todo of todos; let i = index">
+        {{ todo }}
+        <button (click)="removeTodo(i)">Remove</button>
+      </li>
+    </ul>
+  </div>
+  
