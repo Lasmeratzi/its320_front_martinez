@@ -1,0 +1,50 @@
+@import "tailwindcss";
+
+@layer base {
+  body {
+    background-image: url('/assets/images/bg1.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-color: #101010; /* Fallback color */
+    font-family: 'Lato', sans-serif; /* Apply Lato font globally */
+    padding: 20px; /* Add padding to create space for the border */
+  }
+
+  /* Vertical line connecting navlinks */
+  .nav-link-container {
+    position: relative; /* Required for the pseudo-element positioning */
+  }
+ 
+  
+  .nav-link-container::before {
+    content: '';
+    position: absolute;
+    left: 50%; /* Center the line */
+    top: 8px; /* Adjust as needed */
+    bottom: 0;
+    width: 1px;
+    background-color: #000; /* Change to the desired color */
+  }
+}
+#home {
+  border-top: 1px solid black; /* Add a 1px black line on the top */
+  border-right: 1px solid black; /* Add a 1px black line on the right */
+}
+#about {
+  border-top: 1px solid black; /* Add a 1px black line on the top */
+  border-left: 1px solid black; /* Add a 1px black line on the right */
+}
+#projects {
+  border-top: 1px solid black; /* Add a 1px black line on the top */
+  border-bottom: 1px solid black; /* Add a 1px black line on the top */
+  border-right: 1px solid black; /* Add a 1px black line on the right */
+}
+#contact {
+  border-bottom: 1px solid black; /* Add a 1px black line on the top */
+  border-left: 1px solid black; /* Add a 1px black line on the right */
+}
+#header {
+  border-bottom: 1px solid black; /* Add a 1px black line on the top */
+  border-left: 1px solid black; /* Add a 1px black line on the right */
+}

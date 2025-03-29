@@ -1,0 +1,14 @@
+<div class="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3">
+    <div *ngFor="let quote of quotes"
+         class="shadow-md rounded-lg p-4 transition-all duration-300"
+         [ngClass]="{
+            'bg-red-500 hover:bg-[#020082] text-white': quote.isConfucius,
+            'bg-black': !quote.isConfucius
+         }">
+        <li class="font-semibold text-white">ID: {{quote._id}}</li> <!-- Change text to white -->
+        <li class="text-white">Quote: {{quote.quote}}</li> <!-- Change text to white -->
+        <li class="text-white">Author: {{quote.author}}</li> <!-- Change text to white -->
+        <li class="text-white">Title: {{quote.title}}</li> <!-- Change text to white -->
+        <li class="text-white">Published: {{quote.published}}</li> <!-- Change text to white -->
+    </div>
+</div>
