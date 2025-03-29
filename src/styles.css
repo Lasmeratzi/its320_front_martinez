@@ -11,40 +11,63 @@
     padding: 20px; /* Add padding to create space for the border */
   }
 
+  
   /* Vertical line connecting navlinks */
   .nav-link-container {
-    position: relative; /* Required for the pseudo-element positioning */
+    position: relative;  
   }
  
-  
+  .grid-container {
+    @apply grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3;
+}
+
+.quote-card {
+    @apply shadow-md rounded-lg p-4 transition-all duration-300;
+}
+
+.quote-card.is-confucius {
+    @apply bg-red-500 hover:bg-[#020082] text-white;
+}
+
+.quote-card:not(.is-confucius) {
+    @apply bg-black text-white;
+}
+
+.quote-card li {
+    @apply text-white font-semibold;
+}
+
+
+/*
   .nav-link-container::before {
     content: '';
     position: absolute;
-    left: 50%; /* Center the line */
-    top: 8px; /* Adjust as needed */
+    left: 50%;  
+    top: 8px;   
     bottom: 0;
     width: 1px;
-    background-color: #000; /* Change to the desired color */
+    background-color: #000;  
   }
 }
 #home {
-  border-top: 1px solid black; /* Add a 1px black line on the top */
-  border-right: 1px solid black; /* Add a 1px black line on the right */
+  border-top: 1px solid black;   
+  border-right: 1px solid black; 
 }
 #about {
-  border-top: 1px solid black; /* Add a 1px black line on the top */
-  border-left: 1px solid black; /* Add a 1px black line on the right */
+  border-top: 1px solid black;   
+  border-left: 1px solid black;   
 }
 #projects {
-  border-top: 1px solid black; /* Add a 1px black line on the top */
-  border-bottom: 1px solid black; /* Add a 1px black line on the top */
-  border-right: 1px solid black; /* Add a 1px black line on the right */
+  border-top: 1px solid black; 
+  border-bottom: 1px solid black; 
+  border-right: 1px solid black; 
 }
 #contact {
-  border-bottom: 1px solid black; /* Add a 1px black line on the top */
-  border-left: 1px solid black; /* Add a 1px black line on the right */
+  border-bottom: 1px solid black; 
+  border-left: 1px solid black; 
 }
 #header {
-  border-bottom: 1px solid black; /* Add a 1px black line on the top */
-  border-left: 1px solid black; /* Add a 1px black line on the right */
+  border-bottom: 1px solid black; 
+  border-left: 1px solid black; 
+  */
 }
