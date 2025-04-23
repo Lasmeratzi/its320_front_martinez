@@ -1,3 +1,4 @@
+// app.component.ts
 import { Component } from '@angular/core';
 import { TodolistComponent } from './todolist/todolist.component';
 

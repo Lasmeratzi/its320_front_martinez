@@ -1,47 +1,93 @@
-div {
-  max-width: 400px;
-  margin: auto;
-  text-align: center;
-}
-
-input {
-  flex: 1;
-  padding: 8px;
-  border: 2px solid #007bff;
-  border-radius: 5px;
-  outline: none;
-  transition: border-color 0.3s;
-}
-
-input:focus {
-  border-color: #0056b3;
-  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
-}
-
-button {
-  background-color: #ff0000;
+.todo-container {
+  max-width: 500px;
+  margin: 50px auto;
+  padding: 2rem;
+  background-color: #00040d;
+  border-radius: 12px;
   color: white;
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.05);
+}
+
+.header .title {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+}
+
+.input-group {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.todo-input {
+  flex: 1;
+  padding: 0.75rem;
   border: none;
-  padding: 8px 12px;
+  border-radius: 8px;
+  background-color: #1a1a1a;
+  color: white;
+}
+
+.add-btn {
+  padding: 0.75rem 1.2rem;
+  background-color: white;
+  color: black;
+  border: none;
+  border-radius: 8px;
   cursor: pointer;
-  border-radius: 5px;
-  transition: background-color 0.3s;
 }
 
-button:hover {
-  background-color: #4e0707;
-}
-
-ul {
+.todo-list ul {
   list-style: none;
   padding: 0;
 }
 
-li {
+.todo-item {
+  background-color: #1a1a1a;
+  padding: 1rem;
+  margin-top: 1rem;
+  border-radius: 8px;
   display: flex;
   justify-content: space-between;
-  background: #f4f4f4;
-  margin: 5px 0;
-  padding: 8px;
+  align-items: center;
+}
+
+.action-buttons button {
+  margin-left: 0.5rem;
+  padding: 0.4rem 0.7rem;
+  border: none;
   border-radius: 5px;
+  cursor: pointer;
+}
+
+.edit-btn {
+  background-color: #00bfff;
+  color: white;
+}
+
+.delete-btn {
+  background-color: #ff4d4d;
+  color: white;
+}
+
+.edit-modal {
+  margin-top: 2rem;
+  display: flex;
+  gap: 0.5rem;
+}
+
+.update-btn {
+  background-color: white;
+  color: black;
+  border: none;
+  padding: 0.6rem 1rem;
+  border-radius: 8px;
+}
+
+.cancel-btn {
+  background-color: #888;
+  color: white;
+  border: none;
+  padding: 0.6rem 1rem;
+  border-radius: 8px;
 }

@@ -1,17 +1,42 @@
-<div>
-    <h2>Todo List</h2>
-  
-    <!-- Input field with Add button -->
-    <div style="display: flex; gap: 10px;">
-      <input [formControl]="todoInput" (keydown.enter)="addTodo()" placeholder="Enter a new task" />
-      <button (click)="addTodo()">Add</button>
+<div class="todo-container">
+  <div class="header">
+    <h1 class="title">Todo List</h1>
+    <div class="input-group">
+      <input
+        [formControl]="todoInput"
+        class="todo-input"
+        placeholder="What needs to be done?"
+        aria-label="Enter a new todo"
+      />
+      <button
+        class="add-btn"
+        (click)="currentlyEditing ? updateTodo() : addTodo()"
+        aria-label="Add or Update Todo"
+      >
+        {{ currentlyEditing ? 'Update Task' : 'Add Task' }}
+      </button>
     </div>
-  
+  </div>
+
+  <div class="todo-list" aria-live="polite">
     <ul>
-      <li *ngFor="let todo of todos; let i = index">
-        {{ todo }}
-        <button (click)="removeTodo(i)">Remove</button>
+      <li *ngFor="let todo of todos" class="todo-item">
+        <span class="todo-text">{{ todo.text }}</span>
+        <button
+          class="delete-btn"
+          (click)="removeTodo(todo._id)"
+          aria-label="Delete Todo"
+        >
+          &#x2716;
+        </button>
+        <button
+          class="edit-btn"
+          (click)="editTodo(todo)"
+          aria-label="Edit Todo"
+        >
+          ✏️
+        </button>
       </li>
     </ul>
   </div>
-  
+</div>
